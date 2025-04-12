@@ -11,3 +11,6 @@
 * https://streamly.streamlit.app/
 * https://extras.streamlit.app/
 
+
+### Non-streamlit apps
+* https://generative-manim.vercel.app/
