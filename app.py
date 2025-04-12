@@ -10,13 +10,9 @@ from streamlit_pdf_viewer import pdf_viewer
 st.set_page_config(
     page_title="John Feng's Portfolio Site",
     page_icon="🚀",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
-with st.sidebar:
-    st.subheader("Favorite apps")
-    st.markdown("""
-    - [My Favorite Apps](favorite_apps.py)
-    """)
 
 # Custom CSS
 # st.markdown(main_style, unsafe_allow_html=True)
@@ -33,25 +29,25 @@ with cols[0]:
         </div>
     """, unsafe_allow_html=True)
 
-st.markdown('<h2 class="section-title">About Me</h2>', unsafe_allow_html=True)
+st.markdown('<h2 class="section-title">👨‍🔬 About Me</h2>', unsafe_allow_html=True)
 st.markdown("""
-I am a physicist turned data scientist and software developer with expertise in machine learning, 
-data analysis, and full-stack development. I love solving complex problems and creating 
-innovative solutions that make a difference.""", unsafe_allow_html=True)
+I am a physicist turned data scientist and software developer with expertise in machine learning and
+data science. I love solving complex problems and creating 
+innovative solutions that make a difference. I also like to make pretty plots and apps. """, unsafe_allow_html=True)
 
-with st.expander("**Resume for Data Science/AI Engineer**"):
+with st.expander("📈 **Resume for Data Science/AI Engineer**"):
     # st.markdown(open("RESUME/resume_data_ai.md", encoding='utf-8').read(),
     #             unsafe_allow_html=True)
     pdf_viewer(open("RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read())
-st.download_button(label="Download Resume", data=open("RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read(), file_name="John-Feng-AI-Engineer-Resume.pdf")
+st.download_button(label="Download Resume 🔽", data=open("RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read(), file_name="John-Feng-AI-Engineer-Resume.pdf")
 
-with st.expander("**Resume for Hard Tech**"):
+with st.expander("🔬 **Resume for Hard Tech**"):
     # st.markdown(open("RESUME/resume_hard_tech.md", encoding='utf-8').read(),
     #             unsafe_allow_html=True)
     pdf_viewer(open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read())
-st.download_button(label="Download Resume", data=open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read(), file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
+st.download_button(label="Download Resume 🔽", data=open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read(), file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
 # Projects Section
-st.markdown('<h2 class="section-title">Projects</h2>', unsafe_allow_html=True)
+st.markdown('<h2 class="section-title">📊 Projects  </h2>', unsafe_allow_html=True)
 projects = [
     {
         'title': '**Detector Frame-by-Frame Analysis Dashboard**',
