@@ -4,6 +4,7 @@ import plotly.express as px
 from PIL import Image
 import base64
 from style import main_style
+from streamlit_pdf_viewer import pdf_viewer
 
 # Page configuration
 st.set_page_config(
@@ -20,17 +21,8 @@ with st.sidebar:
 # Custom CSS
 # st.markdown(main_style, unsafe_allow_html=True)
 
-# # Display profile picture
-# try:
-#     profile_image = Image.open(r'assets/Linkedin_pic_cropped.jpg')
-#     col1, col2, col3 = st.columns([1,2,1])
-#     with col2:
-#         st.image(profile_image, width=300, caption='John Feng')
-# except FileNotFoundError:
-#     st.warning("Profile image not found in assets folder")
-
 # Header Section
-cols = st.columns([4,1])
+cols = st.columns([4, 1])
 with cols[1]:
     st.image(Image.open(r'assets/Linkedin_pic_cropped.jpg'), )
 with cols[0]:
@@ -41,45 +33,23 @@ with cols[0]:
         </div>
     """, unsafe_allow_html=True)
 
-# About Me Section
-# cols = st.columns([1,1,1])
-# with cols[0]:
-#     st.image(Image.open(r'assets/Linkedin_pic_cropped.jpg'), 
-#              width=75)
-# with cols[1]:
 st.markdown('<h2 class="section-title">About Me</h2>', unsafe_allow_html=True)
+st.markdown("""
+I am a physicist turned data scientist and software developer with expertise in machine learning, 
+data analysis, and full-stack development. I love solving complex problems and creating 
+innovative solutions that make a difference.""", unsafe_allow_html=True)
 
-col1, col2 = st.columns([2, 1])
-with col1:
-    st.markdown("""
-    I am a passionate data scientist and software developer with expertise in machine learning, 
-    data analysis, and full-stack development. I love solving complex problems and creating 
-    innovative solutions that make a difference.""", unsafe_allow_html=True)
-    
-    st.subheader("Education")
-    st.markdown("""
-    - PhD in Physics, University of Toronto
-    - MSc and BA in Physics, University of Toronto
-    """)
-    
-    st.subheader("Experience")
-    st.markdown("""
-    #### Applied Scientist in Detector Physics, Redlen Technologies (Oct 2023-Present)
-    """)
+with st.expander("**Resume for Data Science/AI Engineer**"):
+    # st.markdown(open("RESUME/resume_data_ai.md", encoding='utf-8').read(),
+    #             unsafe_allow_html=True)
+    pdf_viewer(open("RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read())
+st.download_button(label="Download Resume", data=open("RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read(), file_name="John-Feng-AI-Engineer-Resume.pdf")
 
-# Skills Section
-st.markdown('<h2 class="section-title">Skills</h2>', unsafe_allow_html=True)
-skills = {
-    'Programming Languages': ['Python', 'R', 'JavaScript', 'SQL'],
-    'Data Science': ['Machine Learning', 'Deep Learning', 'Data Visualization', 'Statistical Analysis'],
-    'Web Development': ['Streamlit', 'React', 'Node.js', 'Django'],
-    'Tools & Technologies': ['Git', 'Docker', 'AWS', 'TensorFlow', 'PyTorch']
-}
-
-for category, skill_list in skills.items():
-    st.markdown(f"### {category}")
-    st.write(", ".join(skill_list))
-
+with st.expander("**Resume for Hard Tech**"):
+    # st.markdown(open("RESUME/resume_hard_tech.md", encoding='utf-8').read(),
+    #             unsafe_allow_html=True)
+    pdf_viewer(open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read())
+st.download_button(label="Download Resume", data=open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read(), file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
 # Projects Section
 st.markdown('<h2 class="section-title">Projects</h2>', unsafe_allow_html=True)
 projects = [
@@ -100,8 +70,9 @@ projects = [
 for project in projects:
     with st.expander(project['title']):
         st.write(project['description'])
-        st.write("**Technologies:** " + ", ".join(project['technologies']))
+        st.write("**Tech Stack:** " + ", ".join(project['technologies']))
         st.markdown(f"[View Project]({project['link']})")
+        st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
 
 # Contact Section
 st.markdown('<h2 class="section-title">Contact</h2>', unsafe_allow_html=True)
