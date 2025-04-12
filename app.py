@@ -82,20 +82,21 @@ with contact_col1:
     ### Get in Touch
     - 📧 Email: johnfengphd@gmail.com
     - 📱 Phone: (647) 716 7981
-    - 📍 Location: Toronto, ON, Canada
+    - 📍 Location: 
+        * Toronto, ON, Canada
+        * Victoria, BC, Canada
     """)
 
 with contact_col2:
     st.markdown("""
-    ### Social Media
-    - [LinkedIn](https://linkedin.com/in/yourprofile)
-    - [GitHub](https://github.com/yourusername)
-    - [Twitter](https://twitter.com/yourhandle)
+    ### Links
+    - [LinkedIn](https://www.linkedin.com/in/john-feng-5735321b8/)
+    - [GitHub](https://github.com/johnnykfeng)
     """)
 
 # Footer
 st.markdown("""
     <div style="text-align: center; padding: 2rem; color: #7f8c8d;">
-        © 2024 Your Name. All rights reserved.
+        © 2025 John Feng. All rights reserved.
     </div>
 """, unsafe_allow_html=True)
