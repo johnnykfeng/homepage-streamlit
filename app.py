@@ -54,25 +54,28 @@ st.download_button(label="Download Resume", data=open("RESUME/John Feng Resume H
 st.markdown('<h2 class="section-title">Projects</h2>', unsafe_allow_html=True)
 projects = [
     {
-        'title': 'Detector Frame-by-Frame Analysis Dashboard',
+        'title': '**Detector Frame-by-Frame Analysis Dashboard**',
         'description': 'A dashboard that allows users to analyze detector data frame-by-frame',
         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
-        'link': 'https://frame-analyzer.streamlit.app/'
+        'link': 'https://frame-analyzer.streamlit.app/',
+        'gif': 'assets/frame-by-frame.gif'
     },
     {
-        'title': 'Pixel and Spectrum Analysis of Gamma-Ray Detector Data with Moving Mask',
+        'title': '**Pixel and Spectrum Analysis of Gamma-Ray Detector Data with Moving Mask**',
         'description': 'This app allows users to analyze pixel and spectrum of gamma-ray detector data. The data is processed for each moving mask position to expose small areas of interest. The spectrum is calculated for each pixel and displayed in a spectrum plot.',
         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
-        'link': 'https://johnfeng-spectrum-analyzer.streamlit.app/'
+        'link': 'https://johnfeng-spectrum-analyzer.streamlit.app/',
+        'gif': 'assets/Spectrum-analyzer.gif'
     }
 ]
 
 for project in projects:
-    with st.expander(project['title']):
+    with st.expander(project['title'], expanded=True):
         st.write(project['description'])
         st.write("**Tech Stack:** " + ", ".join(project['technologies']))
-        st.markdown(f"[View Project]({project['link']})")
+        st.markdown(f"**Deployed App:** [{project['link']}]({project['link']})")
         st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
+        st.image(project['gif'])
 
 # Contact Section
 st.markdown('<h2 class="section-title">Contact</h2>', unsafe_allow_html=True)
