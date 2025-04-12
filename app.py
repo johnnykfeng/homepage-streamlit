@@ -11,9 +11,14 @@ st.set_page_config(
     page_icon="🚀",
     layout="wide"
 )
+with st.sidebar:
+    st.subheader("Favorite apps")
+    st.markdown("""
+    - [My Favorite Apps](favorite_apps.py)
+    """)
 
 # Custom CSS
-st.markdown(main_style, unsafe_allow_html=True)
+# st.markdown(main_style, unsafe_allow_html=True)
 
 # # Display profile picture
 # try:
@@ -31,8 +36,8 @@ with cols[1]:
 with cols[0]:
     st.markdown("""
         <div class="profile-section">
-            <h1 style="text-align: center; color: #2c3e50;">John Feng</h1>
-            <h2 style="text-align: center; color: #7f8c8d;">Applied Scientist | Data Scientist | AI Engineer</h2>
+            <h1 style="text-align: center; ">John Feng</h1>
+            <h2 style="text-align: center; color: lightgray">Applied Scientist | Data Scientist | AI Engineer</h2>
         </div>
     """, unsafe_allow_html=True)
 
@@ -51,17 +56,16 @@ with col1:
     data analysis, and full-stack development. I love solving complex problems and creating 
     innovative solutions that make a difference.""", unsafe_allow_html=True)
     
-    with st.expander("**Education**"):
-        st.markdown("""
-        - PhD in Physics, University of Toronto
-        - MSc and BA in Physics, University of Toronto
-        """)
+    st.subheader("Education")
+    st.markdown("""
+    - PhD in Physics, University of Toronto
+    - MSc and BA in Physics, University of Toronto
+    """)
     
-    with st.expander("Experience"):
-        st.markdown("""
-        ### Experience
-        #### Applied Scientist in Detector Physics, Redlen Technologies (Oct 2023-Present)
-        """)
+    st.subheader("Experience")
+    st.markdown("""
+    #### Applied Scientist in Detector Physics, Redlen Technologies (Oct 2023-Present)
+    """)
 
 # Skills Section
 st.markdown('<h2 class="section-title">Skills</h2>', unsafe_allow_html=True)
