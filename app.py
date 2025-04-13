@@ -68,7 +68,7 @@ projects = [
         'description': 'Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.',
         'technologies': ['Python', 'Streamlit', 'OpenAI', 'LangChain'],
         'link': 'https://preppal.streamlit.app/',
-        'gif': 'assets/PrepPal_logo.jpeg'
+        'gif': 'assets/hackathon_winners_cropped.jpeg'
     }
 ]
 
@@ -81,7 +81,7 @@ for project in projects:
         gif_path = project['gif']
         if gif_path.lower().endswith(('.jpg', '.jpeg')):
             image = Image.open(gif_path)
-            st.image(image, use_column_width=True)
+            st.image(image)
         else:
             st.image(gif_path)
 
