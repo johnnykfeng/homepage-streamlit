@@ -62,6 +62,13 @@ projects = [
         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
         'link': 'https://johnfeng-spectrum-analyzer.streamlit.app/',
         'gif': 'assets/Spectrum-analyzer.gif'
+    },
+    {
+        'title': '**PrepPal - AI-Powered English Exam Prep**',
+        'description': 'Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.',
+        'technologies': ['Python', 'Streamlit', 'OpenAI', 'LangChain'],
+        'link': 'https://preppal.streamlit.app/',
+        'gif': 'assets/PrepPal_logo.jpg'
     }
 ]
 
