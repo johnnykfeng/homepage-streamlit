@@ -81,7 +81,7 @@ for project in projects:
         gif_path = project['gif']
         if gif_path.lower().endswith(('.jpg', '.jpeg')):
             image = Image.open(gif_path)
-            st.image(image)
+            st.image(image, width=400)
         else:
             st.image(gif_path)
 
