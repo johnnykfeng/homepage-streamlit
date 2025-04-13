@@ -78,7 +78,12 @@ for project in projects:
         st.write("**Tech Stack:** " + ", ".join(project['technologies']))
         st.markdown(f"**Deployed App:** [{project['link']}]({project['link']})")
         st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
-        st.image(project['gif'])
+        gif_path = project['gif']
+        if gif_path.lower().endswith(('.jpg', '.jpeg')):
+            image = Image.open(gif_path)
+            st.image(image, use_column_width=True)
+        else:
+            st.image(gif_path)
 
 # Contact Section
 st.markdown('<h2 class="section-title">Contact</h2>', unsafe_allow_html=True)
