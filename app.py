@@ -48,42 +48,65 @@ with st.expander("🔬 **Resume for Hard Tech**"):
 st.download_button(label="Download Resume 🔽", data=open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read(), file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
 # Projects Section
 st.markdown('<h2 class="section-title">📊 Projects  </h2>', unsafe_allow_html=True)
-projects = [
-    {
-        'title': '**Detector Frame-by-Frame Analysis Dashboard**',
-        'description': 'A dashboard that allows users to analyze detector data frame-by-frame',
-        'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
-        'link': 'https://frame-analyzer.streamlit.app/',
-        'gif': 'assets/frame-by-frame.gif'
-    },
-    {
-        'title': '**Pixel and Spectrum Analysis of Gamma-Ray Detector Data with Moving Mask**',
-        'description': 'This app allows users to analyze pixel and spectrum of gamma-ray detector data. The data is processed for each moving mask position to expose small areas of interest. The spectrum is calculated for each pixel and displayed in a spectrum plot.',
-        'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
-        'link': 'https://johnfeng-spectrum-analyzer.streamlit.app/',
-        'gif': 'assets/Spectrum-analyzer.gif'
-    },
-    {
-        'title': '**PrepPal - AI-Powered English Exam Prep**',
-        'description': 'Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.',
-        'technologies': ['Python', 'Streamlit', 'OpenAI', 'LangChain'],
-        'link': 'https://preppal.streamlit.app/',
-        'gif': 'assets/hackathon_winners_cropped.jpeg'
-    }
-]
+# projects = [
+#     {
+#         'title': '**Detector Frame-by-Frame Analysis Dashboard**',
+#         'description': 'A dashboard that allows users to analyze detector data frame-by-frame',
+#         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
+#         'link': 'https://frame-analyzer.streamlit.app/',
+#         'gif': 'assets/frame-by-frame.gif'
+#     },
+#     {
+#         'title': '**Pixel and Spectrum Analysis of Gamma-Ray Detector Data with Moving Mask**',
+#         'description': 'This app allows users to analyze pixel and spectrum of gamma-ray detector data. The data is processed for each moving mask position to expose small areas of interest. The spectrum is calculated for each pixel and displayed in a spectrum plot.',
+#         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
+#         'link': 'https://johnfeng-spectrum-analyzer.streamlit.app/',
+#         'gif': 'assets/Spectrum-analyzer.gif'
+#     },
+#     {
+#         'title': '**PrepPal - AI-Powered English Exam Prep**',
+#         'description': 'Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.',
+#         'technologies': ['Python', 'Streamlit', 'OpenAI', 'LangChain'],
+#         'link': 'https://preppal.streamlit.app/',
+#         'gif': 'assets/hackathon_winners_cropped.jpeg'
+#     }
+# ]
 
-for project in projects:
-    with st.expander(project['title'], expanded=True):
-        st.write(project['description'])
-        st.write("**Tech Stack:** " + ", ".join(project['technologies']))
-        st.markdown(f"**Deployed App:** [{project['link']}]({project['link']})")
-        st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
-        gif_path = project['gif']
-        if gif_path.lower().endswith(('.jpg', '.jpeg')):
-            image = Image.open(gif_path)
-            st.image(image, width=400)
-        else:
-            st.image(gif_path)
+with st.expander("**Detector Frame-by-Frame Analysis Dashboard**", expanded=True):
+    st.write("A dashboard that allows users to analyze detector data frame-by-frame")
+    st.write("**Tech Stack:** " + ", ".join(['Python', 'Streamlit', 'Pandas', 'Plotly']))
+    st.markdown(f"**Deployed App:** [{'https://frame-analyzer.streamlit.app/'}]({'https://frame-analyzer.streamlit.app/'})")
+    st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
+    image_path = 'assets/frame-by-frame.gif'
+    st.image(image_path)
+
+with st.expander("**Pixel and Spectrum Analysis of Gamma-Ray Detector Data with Moving Mask**", expanded=True):
+    st.write("This app allows users to analyze pixel and spectrum of gamma-ray detector data. The data is processed for each moving mask position to expose small areas of interest. The spectrum is calculated for each pixel and displayed in a spectrum plot.")
+    st.write("**Tech Stack:** " + ", ".join(['Python', 'Streamlit', 'Pandas', 'Plotly']))
+    st.markdown(f"**Deployed App:** [{'https://johnfeng-spectrum-analyzer.streamlit.app/'}]({'https://johnfeng-spectrum-analyzer.streamlit.app/'})")
+    st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
+    image_path = 'assets/Spectrum-analyzer.gif'
+    st.image(image_path)
+    
+with st.expander("**IV Curve Analysis of Semiconductor Devices**", expanded=True):
+    st.write("A web app that allows users to analyze IV and Time-dependent Photocurrent curves of semiconductor devices.")
+    st.write("**Tech Stack:** " + ", ".join(['Python', 'Streamlit', 'Pandas', 'Plotly', 'SciPy', 'NumPy']))
+    st.markdown("**Deployed App:** [https://mitacs-dashboard.streamlit.app/](https://mitacs-dashboard.streamlit.app/)")
+    st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
+    image_path = 'assets/mitacs_dashboard.png'
+    st.image(image_path, width=600)
+
+with st.expander("**PrepPal - AI-Powered English Exam Prep**", expanded=True):
+    st.write("Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.")
+    st.write("**Tech Stack:** " + ", ".join(['Python', 'Streamlit', 'OpenAI', 'LangChain']))
+    st.markdown(f"**Deployed App:** [{'https://preppal.streamlit.app/'}]({'https://preppal.streamlit.app/'})")
+    st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
+    image_path = 'assets/hackathon_winners_cropped.jpeg'
+    image = Image.open(image_path)
+    st.image(image, width=400)
+    
+
+
 
 # Contact Section
 st.markdown('<h2 class="section-title">Contact</h2>', unsafe_allow_html=True)
