@@ -32,8 +32,8 @@ with cols[0]:
 st.markdown('<h2 class="section-title">👨‍🔬 About Me</h2>', unsafe_allow_html=True)
 st.markdown("""
 I am a physicist turned data scientist and software developer with expertise in machine learning and
-data science. I love solving complex problems and creating 
-innovative solutions that make a difference. I also like to make pretty plots and apps. """, unsafe_allow_html=True)
+LLMs. I love solving complex problems and creating 
+innovative solutions that make a difference. I also spend too much time making pretty plots and interactive dashboards for all my projects ^.^ """, unsafe_allow_html=True)
 
 with st.expander("📈 **Resume for Data Science/AI Engineer**"):
     # st.markdown(open("RESUME/resume_data_ai.md", encoding='utf-8').read(),
@@ -48,29 +48,6 @@ with st.expander("🔬 **Resume for Hard Tech**"):
 st.download_button(label="Download Resume 🔽", data=open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read(), file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
 # Projects Section
 st.markdown('<h2 class="section-title">📊 Projects  </h2>', unsafe_allow_html=True)
-# projects = [
-#     {
-#         'title': '**Detector Frame-by-Frame Analysis Dashboard**',
-#         'description': 'A dashboard that allows users to analyze detector data frame-by-frame',
-#         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
-#         'link': 'https://frame-analyzer.streamlit.app/',
-#         'gif': 'assets/frame-by-frame.gif'
-#     },
-#     {
-#         'title': '**Pixel and Spectrum Analysis of Gamma-Ray Detector Data with Moving Mask**',
-#         'description': 'This app allows users to analyze pixel and spectrum of gamma-ray detector data. The data is processed for each moving mask position to expose small areas of interest. The spectrum is calculated for each pixel and displayed in a spectrum plot.',
-#         'technologies': ['Python', 'Streamlit', 'Pandas', 'Plotly'],
-#         'link': 'https://johnfeng-spectrum-analyzer.streamlit.app/',
-#         'gif': 'assets/Spectrum-analyzer.gif'
-#     },
-#     {
-#         'title': '**PrepPal - AI-Powered English Exam Prep**',
-#         'description': 'Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.',
-#         'technologies': ['Python', 'Streamlit', 'OpenAI', 'LangChain'],
-#         'link': 'https://preppal.streamlit.app/',
-#         'gif': 'assets/hackathon_winners_cropped.jpeg'
-#     }
-# ]
 
 with st.expander("**Detector Frame-by-Frame Analysis Dashboard**", expanded=True):
     st.write("A dashboard that allows users to analyze detector data frame-by-frame")
@@ -99,6 +76,7 @@ with st.expander("**IV Curve Analysis of Semiconductor Devices**", expanded=True
 with st.expander("**PrepPal - AI-Powered English Exam Prep**", expanded=True):
     st.write("Winner of 2023 Brave AI Accelerator Hackathon. A web app that uses AI to help users prepare for English proficiency exams such as IELTS and TOEFL. The app generates writing and reading practice questions and provides instant feedback.")
     st.write("**Tech Stack:** " + ", ".join(['Python', 'Streamlit', 'OpenAI', 'LangChain']))
+    st.markdown("**Pitch Deck:** [Google Slides](https://docs.google.com/presentation/d/1K5R1EqNaB_1PF3__VHCqVmuKlmQAU5qk7C30wgXWBjQ/edit?usp=sharing)  ")
     st.markdown(f"**Deployed App:** [{'https://preppal.streamlit.app/'}]({'https://preppal.streamlit.app/'})")
     st.caption("*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
     image_path = 'assets/hackathon_winners_cropped.jpeg'
