@@ -38,9 +38,12 @@ with cols[0]:
 st.markdown('<h2 class="section-title">👨‍🔬 About Me</h2>',
             unsafe_allow_html=True)
 st.markdown("""
-I am a physicist turned data scientist and software developer with expertise in machine learning and
-LLMs. I love solving complex problems and creating 
-innovative solutions that make a difference. I also spend too much time making pretty plots and interactive dashboards for all my projects ^.^ """, unsafe_allow_html=True)
+Started as a physicist, with training in data science and software development, and a passion for building machine learning and AI applications. I love solving complex problems and creating 
+innovative solutions that make a difference.
+
+Built a few AI applications, including a web app for English exam preparation and a dashboard for analyzing detector data.
+""", 
+unsafe_allow_html=True)
 
 with st.expander("📈 **Resume for Data Science/AI Engineer**"):
     # st.markdown(open("RESUME/resume_data_ai.md", encoding='utf-8').read(),
@@ -123,10 +126,15 @@ with contact_col1:
     """)
 
 with contact_col2:
+    st.markdown("""### Links""")
+    # link_col1, link_col2 = st.columns(2)
+    # with link_col1:
+    #     image_path = 'assets/github_logo.png'
+    #     st.image(image_path, width=20)
+    # with link_col2:
     st.markdown("""
-    ### Links
-    - [LinkedIn](https://www.linkedin.com/in/john-feng-5735321b8/)
-    - [GitHub](https://github.com/johnnykfeng)
+    - 💻 [GitHub](https://github.com/johnnykfeng)
+    - 👨🏻‍💼 [LinkedIn](https://www.linkedin.com/in/john-feng-5735321b8/)
     """)
 
 # Footer
