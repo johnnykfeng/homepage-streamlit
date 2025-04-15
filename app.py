@@ -109,13 +109,13 @@ with st.expander("**PrepPal - AI-Powered English Exam Prep**", expanded=True):
 
 
 # Contact Section
-st.markdown('<h2 class="section-title">Contact</h2>', unsafe_allow_html=True)
+st.markdown('<h2 class="section-title">📬 Contact</h2>', unsafe_allow_html=True)
 contact_col1, contact_col2 = st.columns(2)
 with contact_col1:
     st.markdown("""
     ### Get in Touch
     - 📧 Email: johnfengphd@gmail.com
-    - 📱 Phone: (647) 716 7981
+    - 📞 Phone: (647) 716 7981
     - 📍 Location: 
         * Toronto, ON, Canada
         * Victoria, BC, Canada
