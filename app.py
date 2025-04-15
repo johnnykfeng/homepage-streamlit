@@ -107,6 +107,7 @@ with st.expander("**PrepPal - AI-Powered English Exam Prep**", expanded=True):
     image = Image.open(image_path)
     st.image(image, width=400)
 
+st.html("<hr class='solid'>")
 
 # Contact Section
 st.markdown('<h2 class="section-title">📬 Contact</h2>', unsafe_allow_html=True)

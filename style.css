@@ -22,8 +22,38 @@
     font-size: 10rem;
 } */
 
-div[data-testid="stMarkdownContainer"] strong {
-    font-size: 1.3rem;
+/* div[data-testid="stMarkdownContainer"] strong {
+  font-size: 1.3rem;
+} */
+
+/* Target using data-testid */
+/* div[data-testid="stMarkdownContainer"] {
+  font-size: 1.2rem;
+} */
+
+/* Target using class names */
+/* .st-emotion-cache-89jlt8.e121c1cl0 {
+  font-size: 1.2rem;
+} */
+
+/* Or combine both for more specificity */
+div[data-testid="stMarkdownContainer"].st-emotion-cache-89jlt8.e121c1cl0 {
+  font-size: 1.5rem;
 }
 
+div[data-testid="stMarkdownContainer"].st-emotion-cache-14553y9.e121c1cl0 {
+    font-size: 1.5rem;
+  }
 
+/* div[data-testid="stExpander"].stExpander.st-emotion-cache-0.enj44ev0 {
+    background-color: #f2f1f1cd;
+    /* color: brown; */
+    /* border-radius: 10px;
+    padding: 10px;
+    margin: 10px; */
+/* }  */
+
+hr.solid {
+  border-top: 3px solid #bbb;
+  margin: 20px 0;
+}
