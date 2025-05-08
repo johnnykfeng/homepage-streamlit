@@ -41,27 +41,39 @@ st.markdown("""
 Started as a physicist, with training in data science and software development, and a passion for building machine learning and AI applications. I love solving complex problems and creating 
 innovative solutions that make a difference.
 
-Built a few AI applications, including a web app for English exam preparation and a dashboard for analyzing detector data.
+This page showcases a few projects I've built, including a AI-powered web app for English exam preparation, a dashboard for analyzing detector data, and a web app for analyzing IV curves of semiconductor devices.
 """, 
 unsafe_allow_html=True)
 
 with st.expander("📈 **Resume for Data Science/AI Engineer**"):
-    # st.markdown(open("RESUME/resume_data_ai.md", encoding='utf-8').read(),
-    #             unsafe_allow_html=True)
-    pdf_viewer(open("RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read())
+    resume_path = "RESUME\John-Feng_Resume_AI-Eng_DS_2025-04-19.pdf"
+    pdf_viewer(open(resume_path, "rb").read())
 st.download_button(label="Download Resume 🔽", data=open(
-    "RESUME/John-Feng-AI-Engineer-Resume.pdf", "rb").read(), file_name="John-Feng-AI-Engineer-Resume.pdf")
+    resume_path, "rb").read(), file_name="John-Feng_Resume_AI-Eng_DS_2025-04-19.pdf")
 
 with st.expander("🔬 **Resume for Hard Tech**"):
-    # st.markdown(open("RESUME/resume_hard_tech.md", encoding='utf-8').read(),
-    #             unsafe_allow_html=True)
-    pdf_viewer(
-        open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf", "rb").read())
-st.download_button(label="Download Resume 🔽", data=open("RESUME/John Feng Resume Hard Tech 2025-03-08.pdf",
-                   "rb").read(), file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
-# Projects Section
+    resume_path = "RESUME\John Feng Resume Hard Tech 2025-03-08.pdf"
+    pdf_viewer(open(resume_path, "rb").read())
+st.download_button(label="Download Resume 🔽", data=open(resume_path, "rb").read(),
+                   file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
+
+########################
+### PROJECTS SECTION ###
+########################
 st.markdown('<h2 class="section-title">📊 Projects  </h2>',
             unsafe_allow_html=True)
+
+with st.expander("**Tech Talent Matcher**", expanded=True):
+    st.write("Tech Talent Matcher is an AI-powered platform for tech recruitment that uses advanced algorithms to match candidates with job requirements. The platform leverages LLM-based semantic search and skill matching to find the most relevant candidates for specific roles.")
+    st.write("**Tech Stack:** " +
+             ", ".join(["Replit, Python-backend, React-frontend, PostgreSQL, OpenAI models"]))
+    st.markdown(
+        "**Deployed App:** [https://tech-talent-matcher.replit.app/](https://tech-talent-matcher.replit.app/)")
+    st.markdown("**Video Demo:** [Veed Link](https://www.veed.io/view/2a94f7f1-ec84-4ea6-ae10-1611070b5453?panel=share)")
+    st.caption(
+        "*PS: This is a work in progress and the app is not fully functional yet. All profiles are fake AI generated.")
+    image_path = 'assets/tech_talent_matcher_screenshot.png'
+    st.image(image_path, width=700)
 
 with st.expander("**Detector Frame-by-Frame Analysis Dashboard**", expanded=True):
     st.write("A dashboard that allows users to analyze detector data frame-by-frame")
