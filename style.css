@@ -5,9 +5,17 @@ div[data-testid="stMarkdownContainer"].st-emotion-cache-89jlt8.e121c1cl0 {
   font-size: 1.5rem;
 }
 
+/* Modify Font size of expander headers in localhost:8501*/
 div[data-testid="stMarkdownContainer"].st-emotion-cache-14553y9.e121c1cl0 {
     font-size: 1.5rem;
   }
+  
+/*<div class="stExpander st-emotion-cache-0 e1kosxz20" data-testid="stExpander">*/
+
+/* Modify Font size of expander headers in deployed app*/
+div[data-testid="stExpander"].st-emotion-cache-0.e1kosxz20 {
+  font-size: 1.5rem;
+}
 
 hr.solid {
   border-top: 3px solid #bbb;
