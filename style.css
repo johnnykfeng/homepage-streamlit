@@ -11,9 +11,14 @@ div[data-testid="stMarkdownContainer"].st-emotion-cache-14553y9.e121c1cl0 {
   }
   
 /*<div class="stExpander st-emotion-cache-0 e1kosxz20" data-testid="stExpander">*/
-
 /* Modify Font size of expander headers in deployed app*/
 div[data-testid="stExpander"].st-emotion-cache-0.e1kosxz20 {
+  font-size: 1.5rem;
+}
+
+/*<div data-testid="stMarkdownContainer" class="st-emotion-cache-br351g e194bff00">*/
+/* Modify Font size of expander headers in deployed app*/
+div[data-testid="stMarkdownContainer"].st-emotion-cache-br351g.e194bff00 {
   font-size: 1.5rem;
 }
 
