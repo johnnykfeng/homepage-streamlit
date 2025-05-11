@@ -47,15 +47,15 @@ unsafe_allow_html=True)
 
 with st.expander("📈 **Resume for Data Science/AI Engineer**"):
     resume_path = "RESUME/John-Feng_Resume_AI-Eng_DS_2025-04-19.pdf"
+    st.download_button(label="Download Resume 🔽", data=open(
+        resume_path, "rb").read(), file_name="John-Feng_Resume_AI-Eng_DS_2025-04-19.pdf")
     pdf_viewer(open(resume_path, "rb").read())
-st.download_button(label="Download Resume 🔽", data=open(
-    resume_path, "rb").read(), file_name="John-Feng_Resume_AI-Eng_DS_2025-04-19.pdf")
 
 with st.expander("🔬 **Resume for Hard Tech**"):
     resume_path = "RESUME/John Feng Resume Hard Tech 2025-03-08.pdf"
+    st.download_button(label="Download Resume 🔽", data=open(resume_path, "rb").read(),
+                       file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
     pdf_viewer(open(resume_path, "rb").read())
-st.download_button(label="Download Resume 🔽", data=open(resume_path, "rb").read(),
-                   file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
 
 ########################
 ### PROJECTS SECTION ###
