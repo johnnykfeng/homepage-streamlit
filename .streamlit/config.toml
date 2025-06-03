@@ -4,3 +4,9 @@ backgroundColor="#00060e"
 secondaryBackgroundColor="#39c4b6"
 textColor="#9a9f17"
 font="monospace"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
