@@ -11,7 +11,7 @@ st.set_page_config(
     page_title="John Feng's Portfolio Site",
     page_icon="🚀",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # Custom CSS
@@ -56,6 +56,8 @@ with st.expander("🔬 **Resume for Hard Tech**"):
     st.download_button(label="Download Resume 🔽", data=open(resume_path, "rb").read(),
                        file_name="John Feng Resume Hard Tech 2025-03-08.pdf")
     pdf_viewer(open(resume_path, "rb").read())
+
+st.markdown("*Old Portfolio website:* [johnnykfeng.github.io](https://johnnykfeng.github.io/)")
 
 ########################
 ### PROJECTS SECTION ###
