@@ -9,5 +9,5 @@ st.set_page_config(
 
 st.title('My Favorite Apps')
 
-with open('favorite_apps.md', 'r') as f:
+with open('pages/favorite_apps.md', 'r') as f:
     st.markdown(f.read())
