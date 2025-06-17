@@ -64,6 +64,17 @@ st.markdown("*Old Portfolio website:* [johnnykfeng.github.io](https://johnnykfen
 ########################
 st.markdown('<h2 class="section-title">📊 Projects  </h2>',
             unsafe_allow_html=True)
+            
+with st.expander("**Pockels E-field Mapper**", expanded=True):
+    st.write("A dashboard that allows users to analyze Pockels effect data. The app allows users to upload images of the Pockels effect and map the e-field distribution in a semiconductor photodetector.")
+    st.write("**Tech Stack:** " +
+             ", ".join(['Python', 'Streamlit', 'Pandas', 'Plotly']))
+    st.markdown(
+        f"**Deployed App:** [{'https://pockels-efield-mapper.streamlit.app/'}]({'https://pockels-efield-mapper.streamlit.app/'})")
+    st.caption(
+        "*Note: This project is currently hosted on Streamlit Cloud, which may take a few seconds to load.")
+    image_path = 'assets/Pockels_Efield_Profiles_all_biases.png'
+    st.image(image_path, width=700)
 
 with st.expander("**Tech Talent Matcher**", expanded=True):
     st.markdown("Tech Talent Matcher is an AI-powered platform for tech recruitment that uses advanced algorithms to match candidates with job requirements. The platform leverages LLM-based semantic search and skill matching to find the most relevant candidates for specific roles. This project was built by \"*vibe-coding*\" on Replit for submission to [2025 Brave 10x AI Engineer Hackathon](https://hire.bravecareer.io/referrals/10x-AI-Engineer-Hackathon/2fce067a-eb2f-4a0e-8004-60c5d39a7df4).")
